@@ -10,8 +10,20 @@ public class InterfazImc {
 
 
     public static void main(String[] oso) {
-        Imc imc=new Imc(86,1.679f);
-        System.err.println(imc.calcular());
+         s=b;
+         i(int)1;
+         i=s;
+         s=(short)1;
+                      
+         float f=2;
+         double d=2.0;
+         boolean valor=false;
+         Imc otro=new Imc();
+         otro.setFlaco(true);
+         System.out.println(otro.isFlaco());
+                 
+                                
+                      
 }
 }
 
