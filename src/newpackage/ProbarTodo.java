@@ -14,8 +14,7 @@ public class ProbarTodo {
         Test1 objeto2=new Test1(0);
         
         JFrame ventana=new JFrame("Mi primer ventana");
-        ventana setSize(400, 400);
-        ventana setVisible(true);
+
         
         
     }

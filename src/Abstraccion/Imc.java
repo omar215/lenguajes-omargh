@@ -5,39 +5,44 @@
  */
 package Abstraccion;
 
-/**
- *
- * @author T-107
- */
+
 public class Imc {
-    private float peso;
 
     public Imc() {
     }
-    private float altura;
-    private boolean flaco;
+  
+    private float peso;
+    private float estatura;
 
-    public Imc(float peso, float altura) {
+    public Imc(float peso, float estatura) {
         this.peso = peso;
-        this.altura = altura;
+        this.estatura = estatura;
     }
-    this.flaco=flaco;
+    
+    public void setPeso(float peso){
+        this.peso=peso;
+    }
+    
+    public void setEstatura(float estatura){
+        this.estatura=estatura;
+    }
+
+
+    public float calcular(){
+        
+        return peso/(estatura*estatura);
+        
+        
+        
+    }
 
     public float getPeso() {
         return peso;
     }
 
-    public void setPeso(float peso) {
-        this.peso = peso;
+    public float getEstatura() {
+        return estatura;
     }
-
-    public float getAltura() {
-        return altura;
-    }
-
-    public void setAltura(float altura) {
-        this.altura = altura;
-    }
+           
+    
 }
-public boolean  isflaco(){
-return flaco;
