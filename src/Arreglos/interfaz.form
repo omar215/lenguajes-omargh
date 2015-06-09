@@ -33,7 +33,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -48,10 +48,10 @@
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="ASCIIAChar" min="-2" max="-2" attributes="0"/>
-                      <Component id="CambiarASCII" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Component id="Info" alignment="0" max="32767" attributes="0"/>
-                      <Component id="ResultadoASCII" alignment="0" pref="511" max="32767" attributes="0"/>
+                      <Component id="Transformar" min="-2" max="-2" attributes="0"/>
+                      <Component id="titulo" min="-2" max="-2" attributes="0"/>
+                      <Component id="EntradaFrase" alignment="0" max="32767" attributes="0"/>
+                      <Component id="JLabel1" alignment="0" pref="511" max="32767" attributes="0"/>
                       <Component id="ResultadoCHAR" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="166" max="32767" attributes="0"/>
@@ -62,57 +62,51 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="titulo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Info" min="-2" max="-2" attributes="0"/>
+                  <Component id="EntradaFrase" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="CambiarASCII" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                  <Component id="ResultadoASCII" min="-2" max="-2" attributes="0"/>
+                  <Component id="Transformar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="JLabel1" min="-2" pref="22" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="ASCIIAChar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="ResultadoCHAR" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="ResultadoCHAR" min="-2" pref="17" max="-2" attributes="0"/>
                   <EmptySpace pref="110" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="titulo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Interfaz Frase"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="CambiarASCII">
+        <Component class="javax.swing.JButton" name="Transformar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton1"/>
+            <Property name="text" type="java.lang.String" value="Transformar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CambiarASCIIActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TransformarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="ResultadoASCII">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel3"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="JLabel1">
         </Component>
         <Component class="javax.swing.JButton" name="ASCIIAChar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton2"/>
+            <Property name="text" type="java.lang.String" value="Retransformar a texto"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ASCIIACharActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="ResultadoCHAR">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel4"/>
-          </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="Info">
+        <Component class="javax.swing.JTextField" name="EntradaFrase">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InfoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EntradaFraseActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

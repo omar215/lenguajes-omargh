@@ -23,38 +23,34 @@ public class interfaz extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        CambiarASCII = new javax.swing.JButton();
-        ResultadoASCII = new javax.swing.JLabel();
+        titulo = new javax.swing.JLabel();
+        Transformar = new javax.swing.JButton();
+        JLabel1 = new javax.swing.JLabel();
         ASCIIAChar = new javax.swing.JButton();
         ResultadoCHAR = new javax.swing.JLabel();
-        Info = new javax.swing.JTextField();
+        EntradaFrase = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Interfaz Frase");
+        titulo.setText("Interfaz Frase");
 
-        CambiarASCII.setText("jButton1");
-        CambiarASCII.addActionListener(new java.awt.event.ActionListener() {
+        Transformar.setText("Transformar");
+        Transformar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CambiarASCIIActionPerformed(evt);
+                TransformarActionPerformed(evt);
             }
         });
 
-        ResultadoASCII.setText("jLabel3");
-
-        ASCIIAChar.setText("jButton2");
+        ASCIIAChar.setText("Retransformar a texto");
         ASCIIAChar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ASCIIACharActionPerformed(evt);
             }
         });
 
-        ResultadoCHAR.setText("jLabel4");
-
-        Info.addActionListener(new java.awt.event.ActionListener() {
+        EntradaFrase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InfoActionPerformed(evt);
+                EntradaFraseActionPerformed(evt);
             }
         });
 
@@ -66,10 +62,10 @@ public class interfaz extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ASCIIAChar)
-                    .addComponent(CambiarASCII)
-                    .addComponent(jLabel1)
-                    .addComponent(Info)
-                    .addComponent(ResultadoASCII, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+                    .addComponent(Transformar)
+                    .addComponent(titulo)
+                    .addComponent(EntradaFrase)
+                    .addComponent(JLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
                     .addComponent(ResultadoCHAR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(166, Short.MAX_VALUE))
         );
@@ -77,17 +73,17 @@ public class interfaz extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jLabel1)
+                .addComponent(titulo)
                 .addGap(18, 18, 18)
-                .addComponent(Info, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EntradaFrase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(CambiarASCII)
-                .addGap(33, 33, 33)
-                .addComponent(ResultadoASCII)
+                .addComponent(Transformar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(ASCIIAChar)
-                .addGap(35, 35, 35)
-                .addComponent(ResultadoCHAR)
+                .addGap(18, 18, 18)
+                .addComponent(ResultadoCHAR, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(110, Short.MAX_VALUE))
         );
 
@@ -103,32 +99,44 @@ public class interfaz extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void InfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoActionPerformed
-               
-
-    }//GEN-LAST:event_InfoActionPerformed
-
-    private void CambiarASCIIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarASCIIActionPerformed
- 
-        String dato=Info.getText();
-         byte[]algo=dato.getBytes();
- for(byte b:algo){}
- ResultadoASCII.setText(" "+(char)78);
- 
-    }//GEN-LAST:event_CambiarASCIIActionPerformed
+    private void TransformarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TransformarActionPerformed
+ //Paso uno, pedirle al textfiled el texto
+        String f= EntradaFrase.getText();
+        byte[] arreglo=f.getBytes();
+        StringBuilder builder=new StringBuilder();
+       for(byte b:arreglo){
+           builder.append(b);
+           builder.append((" , "));
+       }
+       String t=builder.toString();
+        JLabel1.setText(t);
+        
+    
+    }//GEN-LAST:event_TransformarActionPerformed
 
     private void ASCIIACharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ASCIIACharActionPerformed
-         String dato=Info.getText();
-         byte[]algo=dato.getBytes();
- for(byte b:algo){}
- ResultadoCHAR.setText(" "+(char)78);
+        String f= JLabel1.getText();
+        byte[] arreglo=f.getBytes();
+        StringBuilder builder=new StringBuilder();
+       for(byte b:arreglo){
+           builder.append((char)b);
+          builder.append((" , "));
+       }
+       String t=builder.toString();
+        ResultadoCHAR.setText(t);
+        
+ 
     }//GEN-LAST:event_ASCIIACharActionPerformed
+
+    private void EntradaFraseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntradaFraseActionPerformed
+
+    }//GEN-LAST:event_EntradaFraseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,11 +175,11 @@ public class interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ASCIIAChar;
-    private javax.swing.JButton CambiarASCII;
-    private javax.swing.JTextField Info;
-    private javax.swing.JLabel ResultadoASCII;
+    private javax.swing.JTextField EntradaFrase;
+    private javax.swing.JLabel JLabel1;
     private javax.swing.JLabel ResultadoCHAR;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton Transformar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }

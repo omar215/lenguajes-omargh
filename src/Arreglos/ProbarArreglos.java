@@ -35,7 +35,7 @@ public class ProbarArreglos {
  for(byte valor:algo){
      builder.append((char)valor);
  }
- etiquetax.setText(builder.toString());
+ //etiquetax.setText(builder.toString());
  //
  for(byte b:algo){
      System.out.print((char)b);
