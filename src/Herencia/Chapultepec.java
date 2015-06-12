@@ -15,16 +15,32 @@ public class Chapultepec {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      //Animal raro=new Animal();
-      //raro.setEdad(2);
-      //raro.setNombre("Rareza");
-      Tortuga animal1=new Tortuga();
-      animal1.setNombre("Japonesa");
-      animal1.setEdad(12);
-      Leon animal2=new Leon();
-      animal2.setNombre("Africano");
-      animal2.setEdad(20);
-      
+    //Vamos a crear animalitos 
+        Pollo p1=new Pollo();
+        p1.setNombre("Pollito pio");
+        
+        Leon L1=new Leon();
+        L1.setNombre("Timba");
+        
+        Leon L2=new Leon();
+        L2.setNombre("Mufaza");
+        
+        Delfin D1=new Delfin();
+        D1.setNombre("Flipper");
+        
+        Tortuga T1=new Tortuga();
+        T1.setNombre("Donatelo");
+        
+        ComportamientoRuido animales[]=new ComportamientoRuido[4];
+        animales[0]=p1;
+        animales[1]=L1;
+        animales[2]=L2;
+        animales[3]=D1;
+        
+        for(ComportamientoRuido algo:animales){
+            System.out.println(algo.HacerRuido());
+            
+        }
     }
-    
 }
+   

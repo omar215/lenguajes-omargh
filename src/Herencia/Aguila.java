@@ -5,10 +5,10 @@
  */
 package Herencia;
 
-/**
- *
- * @author T-107
- */
+
 public class Aguila extends Animal{
-    
+    public String HacerRuido() {
+        return "aaagh!!!"+getNombre();
+  
+    }    
 }

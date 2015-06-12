@@ -5,12 +5,13 @@
  */
 package Herencia;
 
-public class Leon extends Animal implements ComportamientoRuido{
+
+public class Pollo extends Animal implements ComportamientoRuido {
 
     @Override
     public String HacerRuido() {
-        return "Grrruuuaaaar!!!"+getNombre();
-  
+     return "pio pio"+getNombre();
+     
     }
     
 }
