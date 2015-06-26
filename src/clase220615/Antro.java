@@ -13,6 +13,13 @@ public class Antro{
         Direccion d1=new Direccion(55130,"Ecatepec");
        Usuarios u1=new Usuarios("Juan", 42, "jcampos@gmail.com", d1);
         System.out.println(u1.getDireccion().getMunicipio());
+        
+        Bebida bebida=new Bebida();
+        bebida.setTipo("BebidasAlcoholicas");
+        String[]reco= bebida.ObtenerRecomendaciones();
+        for(String be:reco){
+        System.out.println("Bebidas: "+be);
+    }
          
     }
     
