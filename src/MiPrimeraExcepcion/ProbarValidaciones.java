@@ -21,7 +21,7 @@ public class ProbarValidaciones {
         try {
             
             ValidarEdad.validar(edad);
-            System.err.println("Si tu te vez no se lanzó la excepción");
+            System.out.println("Si tu te vez no se lanzó la excepción");
             
         } catch (MenorDeEdadException ex) {
             System.out.println(ex.getMessage());
