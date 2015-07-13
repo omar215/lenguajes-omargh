@@ -7,7 +7,8 @@ package Evaluacion;
 
 // esta clase es tipo POJO por que no tiene logica, solo atruibutos
 
-public abstract class Examen {
+public abstract
+        class Examen {
     private int calificacion;
     private float porcentaje;
 

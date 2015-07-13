@@ -30,7 +30,7 @@ public class Tabares extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
-        jLabel2 = new javax.swing.JLabel();
+        JLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,8 +43,6 @@ public class Tabares extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-
-        jLabel2.setText("jLabel2");
 
         jButton1.setText("Recomendacion de la casa");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +61,7 @@ public class Tabares extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(322, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -76,8 +74,8 @@ public class Tabares extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addComponent(jButton1)
                 .addGap(49, 49, 49)
-                .addComponent(jLabel2)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addComponent(JLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -103,6 +101,7 @@ public class Tabares extends javax.swing.JFrame {
         for (String be:b.ObtenerRecomendaciones()){
         sb.append(be);
         sb.append(" ,");
+        JLabel2.setText("bebida "+be);
     
     }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -147,10 +146,10 @@ public class Tabares extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JLabel2;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

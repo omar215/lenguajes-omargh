@@ -7,19 +7,12 @@ package parcial;
 
 /**
  *
- * @author T-107
+ * @author Omar
  */
-public class Libros { 
-    String titulo; 
- 
- 
-     public String getTitulo() { 
-         return titulo; 
-     } 
- 
- 
-     public void setTitulo(String titulo) { 
-         this.titulo = titulo; 
-     } 
+public class Externo extends Usuario{ 
      
+       @Override
+     public void prestar()throws ExcepcionLibros{ 
+         if(getLibros().length>1)throw new ExcepcionLibros(); 
+     } 
  } 

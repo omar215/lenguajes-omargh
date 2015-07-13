@@ -5,13 +5,10 @@
  */
 package parcial;
 
-/**
- *
- * @author T-107
- */
-public class ExcepcionLibros extends Exception {
-    public ExcepcionLibros(){ 
-         super("Error en la cantidad"); 
+
+public class Profesor extends Usuario{ 
+      @Override
+     public void prestar()throws ExcepcionLibros{ 
+         if(getLibros().length>2)throw new ExcepcionLibros(); 
      } 
  } 
-

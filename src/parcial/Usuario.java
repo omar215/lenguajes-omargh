@@ -9,6 +9,7 @@ package parcial;
  *
  * @author T-107
  */
+
 public class Usuario {
     private String Nombre;
     private Libros libros[];
@@ -28,5 +29,8 @@ public class Usuario {
     public void setLibros(Libros[] libros) {
         this.libros = libros;
     }
-    
+    public void prestar() throws ExcepcionLibros{ 
+          
+     } 
+
 }

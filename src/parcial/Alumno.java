@@ -10,8 +10,9 @@ package parcial;
  * @author T-107
  */
 public class Alumno extends Usuario {
-    private void prestar()throws ExcepcionLibros{
-        if(getLibros().lenght>3)throw new ExcepcionLibros();
+      @Override
+    public void prestar()throws ExcepcionLibros{
+        if(getLibros().length>3)throw new ExcepcionLibros();
         
     }
 }

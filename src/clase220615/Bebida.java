@@ -27,8 +27,7 @@ public class Bebida {
     }else{
         String[] BebidasNoAlcoholicas={"Limonada","Naranjada","Cafe","Refresco","Agua"};
         return BebidasNoAlcoholicas;
-        }
-        
+        }        
 }
 
     public String getTipo() {
