@@ -5,6 +5,10 @@
  */
 package Collections;
 
+import java.util.Collections;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author T-107
@@ -114,12 +118,14 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jTabbedPane1.addTab("Agregar usuarios", jPanel1);
 
         BotonCargarUsuarios.setText("Cargar usuarios");
+        BotonCargarUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonCargarUsuariosActionPerformed(evt);
+            }
+        });
 
         TablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
                 {null, null, null}
             },
             new String [] {
@@ -172,6 +178,23 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private void BotonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGuardarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonGuardarActionPerformed
+
+    private void BotonCargarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCargarUsuariosActionPerformed
+
+        GeneradorDeUsuario gen=new GeneradorDeUsuario();
+        List<Usuarios> usuarios=gen.getUsuarios();
+        Collections.sort(usuarios, new UsuarioPorNombre());
+        TablaUsuarios.setModel(new DefaultTableModel(new String[]{"Nombre","Edad","email"},gen.getUsuarios().size()));
+        
+        int fila=0;
+        for(Usuarios u:usuarios){
+            TablaUsuarios.setValueAt(u.getNombre(), fila, 0);
+            TablaUsuarios.setValueAt(u.getEdad(), fila, 1);
+            TablaUsuarios.setValueAt(u.getEmail(), fila, 2);
+            fila++;
+        }
+
+    }//GEN-LAST:event_BotonCargarUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
