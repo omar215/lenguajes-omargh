@@ -7,7 +7,8 @@ package Collections;
 
 public class Usuarios {
     private String nombre;
-    private int edad;
+    //cambiar el int de edad a integer para que fuera referenciado y no primitivo
+    private Integer edad;
     private String email;
 
     public Usuarios(String nombre, int edad, String email) {
@@ -24,11 +25,11 @@ public class Usuarios {
         this.nombre = nombre;
     }
 
-    public int getEdad() {
+    public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Integer edad) {
         this.edad = edad;
     }
 
